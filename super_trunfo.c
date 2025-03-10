@@ -59,7 +59,6 @@ int main()
   densidade_populacional_carta_1 = populacao_carta_1 / area_carta_1; // Calculando densidade populacional da carta 1
   PIB_per_capita_carta_1 = PIB_carta_1 / (float) populacao_carta_1; // Calculando PIB per capita da carta 1
 
-
   // Cadastro carta 2
   printf("\n\n-----------Carta 02----------- \n");
   printf("Indique uma letra de 'A' a 'H' (representando um dos oito estados) para a carta 2: ");
