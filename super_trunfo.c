@@ -21,6 +21,12 @@ int main()
   float area_carta_1, PIB_carta_1, 
   area_carta_2, PIB_carta_2;
 
+  float densidade_populacional_carta_1, 
+  densidade_populacional_carta_2;
+
+  float PIB_per_capita_carta_1, 
+  PIB_per_capita_carta_2;
+
 
   // Cadastro carta 1
   printf("\n-----------Carta 01----------- \n");
@@ -50,6 +56,9 @@ int main()
   printf("\nIndique a quantidade de pontos turisticos na cidade para a carta 1: ");
   scanf("%d", &pts_turisticos_carta_1); // Lê um número inteiro para os pontos turísticos
 
+  densidade_populacional_carta_1 = populacao_carta_1 / area_carta_1; // Calculando densidade populacional da carta 1
+  PIB_per_capita_carta_1 = PIB_carta_1 / (float) populacao_carta_1; // Calculando PIB per capita da carta 1
+
 
   // Cadastro carta 2
   printf("\n\n-----------Carta 02----------- \n");
@@ -78,15 +87,18 @@ int main()
   printf("\nIndique a quantidade de pontos turisticos na cidade para a carta 2: ");
   scanf("%d", &pts_turisticos_carta_2); 
 
+  densidade_populacional_carta_2 = populacao_carta_2 / area_carta_2; // Calculando densidade populacional da carta 2
+  PIB_per_capita_carta_2 = PIB_carta_2 / (float) populacao_carta_2; // Calculando PIB per capita da carta 2
+
 
   // Exibição de cartas:
   printf("\n\n----------- Exibicao de cartas -----------\n\n");
-  printf("Carta 1: \nEstado: %c \nCodigo: %s \nNome da cidade: %sPopulacao: %d \nArea: %.2f km quadrados \nPIB: %.2f bilhoes de reais \nNumero de Pontos Turisticos: %d \n", 
-    estado_carta_1, codigo_completo_carta_1, cidade_carta_1, populacao_carta_1, area_carta_1, PIB_carta_1, pts_turisticos_carta_1); 
+  printf("Carta 1: \nEstado: %c \nCodigo: %s \nNome da cidade: %sPopulacao: %d \nArea: %.2f km quadrados \nPIB: %.2f bilhoes de reais \nNumero de Pontos Turisticos: %d \nDensidade Populacional: %.2f hab/km quadrado \nPIB per Capita: %.2f reais \n", 
+    estado_carta_1, codigo_completo_carta_1, cidade_carta_1, populacao_carta_1, area_carta_1, PIB_carta_1, pts_turisticos_carta_1, densidade_populacional_carta_1, PIB_per_capita_carta_1); 
   // Exibe os dados da primeira carta
 
-  printf("\n\nCarta 2: \nEstado: %c \nCodigo: %s \nNome da cidade: %sPopulacao: %d \nArea: %.2f km quadrados \nPIB: %.2f bilhoes de reais \nNumero de Pontos Turisticos: %d \n", 
-    estado_carta_2, codigo_completo_carta_2, cidade_carta_2, populacao_carta_2, area_carta_2, PIB_carta_2, pts_turisticos_carta_2);
+  printf("\n\nCarta 2: \nEstado: %c \nCodigo: %s \nNome da cidade: %sPopulacao: %d \nArea: %.2f km quadrados \nPIB: %.2f bilhoes de reais \nNumero de Pontos Turisticos: %d \nDensidade Populacional: %.2f hab/km quadrado \nPIB per Capita: %.2f reais \n", 
+    estado_carta_2, codigo_completo_carta_2, cidade_carta_2, populacao_carta_2, area_carta_2, PIB_carta_2, pts_turisticos_carta_2, densidade_populacional_carta_2, PIB_per_capita_carta_2);
   // Exibe os dados da segunda carta
 
   return 0; // Indica que o programa finalizou corretamente
